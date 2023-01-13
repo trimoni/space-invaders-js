@@ -95,6 +95,15 @@ function update() {
     bullet.y += bulletVelocity
     context.fillStyle='white'
     context.fillRect(bullet.x, bullet.y, bullet.width, bullet.height)
+
+    for (let j = 0; j < alienArray.length; j++){
+      let alien = alienArray[j]
+      if (!bullet.used && alien.alive && detectCollision(bullet, alien)){
+        bullet.used = true
+        alien.alive = false
+        alienCount--
+      }
+    }
   }
 
   //clear bullets
