@@ -71,6 +71,7 @@ function update() {
   for (let i = 0; i < alienArray.length; i++){
     let alien = alienArray[i]
     if (alien.alive){
+      alien.x += alienVelocityX
       context.drawImage(alienImg, alien.x, alien.y, alien.width, alien.height)
     }
   }
