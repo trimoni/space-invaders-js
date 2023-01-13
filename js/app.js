@@ -41,6 +41,7 @@ window.onload = function(){
   }
 
   requestAnimationFrame(update)
+  document.addEventListener('keydown', moveShip)
 }
 
 function update() {
@@ -49,7 +50,7 @@ function update() {
 }
 
 function moveShip(e) {
-  if (e.code = 'ArrowLeft') {
+  if (e.code == 'ArrowLeft') {
     ship.x -= shipVelocityX // move left
   }
   else if (e.code == 'ArrowRight') {
