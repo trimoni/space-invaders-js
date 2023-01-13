@@ -37,6 +37,10 @@ let alienColumns = 3
 let alienCount = 0
 let alienVelocityX = 1 //moving speed of alien
 
+//bullets
+let bulletArray = []
+let bulletVelocity = -10
+
 window.onload = function(){
   board = document.getElementById('board')
   board.width = boardWidth
