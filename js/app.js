@@ -35,6 +35,7 @@ let alienImg
 let alienRows = 2
 let alienColumns = 3
 let alienCount = 0
+let alienVelocityX = 1 //moving speed of alien
 
 window.onload = function(){
   board = document.getElementById('board')
