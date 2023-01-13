@@ -88,6 +88,14 @@ function update() {
       context.drawImage(alienImg, alien.x, alien.y, alien.width, alien.height)
     }
   }
+
+  //bullets
+  for (let i = 0; i < bulletArray.length; i++){
+    let bullet = bulletArray[i]
+    bullet.y += bulletVelocity
+    context.fillStyle='white'
+    context.fillRect(bullet.x, bullet.y, bullet.width, bullet.height)
+  }
 }
 
 function moveShip(e) {
