@@ -63,6 +63,7 @@ window.onload = function(){
 
   requestAnimationFrame(update)
   document.addEventListener('keydown', moveShip)
+  document.addEventListener('keyup', shoot)
 }
 
 function update() {
