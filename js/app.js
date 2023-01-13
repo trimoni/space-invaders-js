@@ -26,4 +26,9 @@ window.onload = function(){
   board.width = boardWidth
   board.height = boardHeight
   context = board.getContext('2d')
+
+  // draw ship
+  context.fillStyle='green'
+  context.fillRect(ship.x, ship.y, ship.width, ship.height)
 }
+
