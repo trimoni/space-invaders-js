@@ -125,5 +125,6 @@ function shoot(e) {
       height: tileSize/2,
       used : false
     }
+    bulletArray.push(bullet)
   }
 }
