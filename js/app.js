@@ -41,6 +41,9 @@ let alienVelocityX = 1 //moving speed of alien
 let bulletArray = []
 let bulletVelocity = -10
 
+let score = 0
+let gameOver = false
+
 window.onload = function(){
   board = document.getElementById('board')
   board.width = boardWidth
@@ -68,6 +71,10 @@ window.onload = function(){
 
 function update() {
   requestAnimationFrame(update)
+
+  if (gameOver) {
+    return
+  }
 
   context.clearRect(0,0, board.width, board.height)
   context.drawImage(shipImg, ship.x, ship.y, ship.width, ship.height)
@@ -122,6 +129,9 @@ function update() {
 }
 
 function moveShip(e) {
+  if (gameOver) {
+    return
+  }
   if (e.code == 'ArrowLeft' && ship.x - shipVelocityX >= 0) {
     ship.x -= shipVelocityX // move left
   }
@@ -149,6 +159,9 @@ function createAliens() {
 }
 
 function shoot(e) {
+  if (gameOver){
+    return
+  }
   if (e.code == 'Space'){
     let bullet = {
       x : ship.x + shipWidth*15/32,
