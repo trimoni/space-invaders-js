@@ -54,6 +54,7 @@ window.onload = function(){
 
   alienImg = new Image()
   alienImg.src = './alien.png'
+  createAliens()
 
   requestAnimationFrame(update)
   document.addEventListener('keydown', moveShip)
@@ -64,6 +65,11 @@ function update() {
 
   context.clearRect(0,0, board.width, board.height)
   context.drawImage(shipImg, ship.x, ship.y, ship.width, ship.height)
+
+  // create aliens
+  for (let i = 0; i < alienArray.length; i++){
+    let alien = alienArray[i]
+  }
 }
 
 function moveShip(e) {
