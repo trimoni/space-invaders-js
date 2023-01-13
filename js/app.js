@@ -35,6 +35,8 @@ window.onload = function(){
 
   shipImg = new Image()
   shipImg.src = './ship.png'
-  context.drawImage(shipImg, ship.x, ship.y, ship.width, ship.height)
+  shipImg.onload = function() {
+    context.drawImage(shipImg, ship.x, ship.y, ship.width, ship.height)
+  }
 }
 
