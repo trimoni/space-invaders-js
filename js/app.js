@@ -85,6 +85,9 @@ function createAliens() {
         width: alienWidth,
         height: alienHeight
       }
+
+      alienArray.push(alien)
     }
   }
+  alienCount = alienArray.length
 }
