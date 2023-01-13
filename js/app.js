@@ -52,10 +52,10 @@ function update() {
 }
 
 function moveShip(e) {
-  if (e.code == 'ArrowLeft') {
+  if (e.code == 'ArrowLeft' && ship.x - shipVelocityX >= 0) {
     ship.x -= shipVelocityX // move left
   }
-  else if (e.code == 'ArrowRight') {
+  else if (e.code == 'ArrowRight' && ship.x + shipVelocityX + shipWidth <= board.width) {
     ship.x += shipVelocityX // move right
   }
 }
