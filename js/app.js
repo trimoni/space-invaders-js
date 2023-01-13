@@ -110,6 +110,10 @@ function update() {
   while(bulletArray.length > 0 && (bulletArray[0].used || bulletArray[0].y < 0)){
     bulletArray.shift()
   }
+
+  if (alienCount == 0){
+    alienColumns = Math.min(alienColumns + 1, columns/2 -2)
+  }
 }
 
 function moveShip(e) {
