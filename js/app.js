@@ -46,5 +46,13 @@ window.onload = function(){
 function update() {
   requestAnimationFrame(update)
   context.drawImage(shipImg, ship.x, ship.y, ship.width, ship.height)
+}
 
+function moveShip(e) {
+  if (e.code = 'ArrowLeft') {
+    ship.x -= shipVelocityX // move left
+  }
+  else if (e.code == 'ArrowRight') {
+    ship.x += shipVelocityX // move right
+  }
 }
