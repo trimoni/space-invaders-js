@@ -69,6 +69,9 @@ function update() {
   // create aliens
   for (let i = 0; i < alienArray.length; i++){
     let alien = alienArray[i]
+    if (alien.alive){
+      context.drawImage(alienImg, alien.x, alien.y, alien.width, alien.height)
+    }
   }
 }
 
@@ -88,8 +91,9 @@ function createAliens() {
         img : alienImg,
         x : alienX + c*alienWidth,
         y : alienY + r*alienHeight,
-        width: alienWidth,
-        height: alienHeight
+        width : alienWidth,
+        height : alienHeight,
+        alive : true 
       }
 
       alienArray.push(alien)
