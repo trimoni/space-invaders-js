@@ -24,6 +24,13 @@ let ship = {
 let shipImg
 let shipVelocityX = tileSize
 
+// alien
+let alienArray = []
+let alienWidth = tileSize*2
+let alienHeight = tileSize
+let alienX = tileSize
+let alienY = tileSize
+
 window.onload = function(){
   board = document.getElementById('board')
   board.width = boardWidth
