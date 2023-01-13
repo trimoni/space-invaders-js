@@ -36,7 +36,6 @@ let alienRows = 2
 let alienColumns = 3
 let alienCount = 0
 
-
 window.onload = function(){
   board = document.getElementById('board')
   board.width = boardWidth
@@ -70,5 +69,19 @@ function moveShip(e) {
   }
   else if (e.code == 'ArrowRight' && ship.x + shipVelocityX + shipWidth <= board.width) {
     ship.x += shipVelocityX // move right
+  }
+}
+
+function createAliens() {
+  for (let c = 0; c < alienColumns; c++){
+    for (let r = 0; r < alienRows; r++){
+      let alien = {
+        img : alienImg,
+        x : alienX + c*alienWidth,
+        y : alienY + r*alienHeight,
+        width: alienWidth,
+        height: alienHeight
+      }
+    }
   }
 }
