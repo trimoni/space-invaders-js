@@ -114,6 +114,10 @@ function update() {
   if (alienCount == 0){
     alienColumns = Math.min(alienColumns + 1, columns/2 -2)
     alienRows = Math.min(aliensRows + 1, rows-4)
+    alienVelocityX += 0.2
+    alienArray = []
+    bulletArray = []
+    createAliens()
   }
 }
 
