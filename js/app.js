@@ -72,6 +72,9 @@ function update() {
     let alien = alienArray[i]
     if (alien.alive){
       alien.x += alienVelocityX
+      if (alien.x + alien.width >= board.width || alien.x <= 0){
+        alienVelocityX *= -1
+      }
       context.drawImage(alienImg, alien.x, alien.y, alien.width, alien.height)
     }
   }
