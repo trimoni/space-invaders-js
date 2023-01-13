@@ -21,6 +21,8 @@ let ship = {
   height: shipHeight,
 }
 
+let shipImg
+
 window.onload = function(){
   board = document.getElementById('board')
   board.width = boardWidth
@@ -28,7 +30,11 @@ window.onload = function(){
   context = board.getContext('2d')
 
   // draw ship
-  context.fillStyle='green'
-  context.fillRect(ship.x, ship.y, ship.width, ship.height)
+  // context.fillStyle='green'
+  // context.fillRect(ship.x, ship.y, ship.width, ship.height)
+
+  shipImg = new Image()
+  shipImg.src = './ship.png'
+  context.drawImage(shipImg, ship.x, ship.y, ship.width, ship.height)
 }
 
