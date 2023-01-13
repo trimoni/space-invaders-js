@@ -8,6 +8,10 @@ let boardWidth = tileSize * columns
 let boardHeight = tileSize * rows
 let context
 
+//ship
+let shipWidth = tileSize*2
+let shipHeight = tileSize
+
 window.onload = function(){
   board = document.getElementById('board')
   board.width = boardWidth
