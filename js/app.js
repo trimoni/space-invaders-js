@@ -30,6 +30,12 @@ let alienWidth = tileSize*2
 let alienHeight = tileSize
 let alienX = tileSize
 let alienY = tileSize
+let alienImg
+
+let alienRows = 2
+let alienColumns = 3
+let alienCount = 0
+
 
 window.onload = function(){
   board = document.getElementById('board')
